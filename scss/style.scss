@@ -1,0 +1,738 @@
+@import "variable_overrides";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: var(#fff);
+}
+
+body {
+	// background-color: #293b4e;
+	background-image: url('https://media.giphy.com/media/9bTjZrytydVRK/source.gif');
+	font-family: 'Ranchers', 'sans serif';
+	cursor: pointer;
+}
+
+.playerTwoMainBox {
+	background-color: #212e3d;
+	box-shadow: 0 20px 50px rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	margin-top: 100px;
+	z-index: 1;
+}
+
+.playerTwoBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Life points in numbers */
+#points1 {
+	font-family: 'Ranchers', cursive;
+	font-size: 30px;
+	color: var(--white);
+	letter-spacing: 2px;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+#points2 {
+	font-family: 'Ranchers', cursive;
+	font-size: 30px;
+	color: var(--white);
+	letter-spacing: 2px;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+#lifePoints1 {
+	margin-top: 5px;
+	color: var(--white);
+	letter-spacing: 2px;
+}
+
+#lifePoints2 {
+	margin-top: 5px;
+	color: var(--white);
+	letter-spacing: 2px;
+}
+
+/* PlayerOne and PlayerTwo headings in player boxes */
+.p1Heading {
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	font-size: 30px;
+	margin-top: 10px;
+	letter-spacing: 2px;
+}
+
+.p2Heading {
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	font-size: 30px;
+	margin-top: 10px;
+	letter-spacing: 2px;
+}
+
+.playerName1 {
+	font-family: 'Ranchers', cursive;
+	letter-spacing: 2px;
+	color: var(--white);
+	font-size: 16px;
+}
+
+.playerName2 {
+	font-family: 'Ranchers', cursive;
+	letter-spacing: 2px;
+	color: var(--white);
+	font-size: 16px;
+}
+
+/*  Weapons description inside the player boxes */
+#w1 {
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	letter-spacing: 2px;
+	margin: 15px !important;
+}
+
+#w2 {
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	letter-spacing: 2px;
+	margin: 15px !important;
+}
+
+/* Players boxes */
+.playerOneMainBox {
+	background-color: #212e3d;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5);
+	height: 400px;
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+
+}
+
+.playerOneBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Weapons images inside the player boxes */
+p {
+	color: #000;
+	margin: 0 !important;
+}
+
+/* Gameboard */
+#gameboard {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(10, 10%);
+	background:  rgb(55, 90, 114);
+	margin-top: 80px;
+}
+
+h4 {
+	color: #000;
+	letter-spacing: 1.6px;
+	font-size: 30px;
+}
+
+.gameRules {
+	margin-bottom: 5px;
+	width: 50%;
+	text-align: left;
+	z-index: 1;
+	border: 2px solid var(--white);
+	padding: 5px 30px;
+	background-color: var(--white);
+}
+
+.gameRulesLi li {
+	font-size: 20px;
+	letter-spacing: 1.6px;
+	color: #000;
+	margin: 5px;
+
+}
+
+.tile {
+	border: 2px solid var(--white);
+}
+
+.main-tile {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+// /* Weapons */
+.lightning {
+	background-image: url("../images/lightning.apple-touch-icon.png");
+}
+
+.cyclone {
+	background-image: url("../images/cyclone.apple-touch-icon.png");
+}
+
+.fire {
+	background-image: url("../images/fire.apple-touch-icon.png");
+}
+
+.wave {
+	background-image: url("../images/wave.apple-touch-icon.png");
+}
+
+/* Obstacles */
+.tree {
+	background-image: url("../images/tree.apple-touch-icon.png");
+}
+
+.treeTwo {
+	background-image: url("../images/treeTwo.apple-touch-icon.png");
+}
+
+.tornado {
+	background-image: url("../images/wind.apple-touch-icon.png");
+}
+
+/* Highlight classes */
+.weaponClass {
+	background-size: 28px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #43658b;
+}
+
+.obstacleClass {
+	background-color: #293b4e;
+	background-repeat: no-repeat;
+	background-size: 28px;
+	background-position: center;
+}
+
+.highlightTile {
+	background-color: #41584b;
+}
+
+/* Players */
+.playerOne {
+	background-image: url("../images/playerOneNinja.png");
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+	background-position: center;
+}
+
+.playerTwo {
+	background-image: url("../images/playerTwoNinja.png");
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+	background-position: center;
+}
+
+/* Lifepoints with CSS animations */
+#lifePoints1 {
+	font-family: 'Ranchers', cursive;
+	font-size: 20px;
+}
+
+#lifePoints2 {
+	font-family: 'Ranchers', cursive;
+	font-size: 20px;
+}
+
+
+// /* Button */
+.button {
+	background-color: rgb(55, 90, 114);
+	padding: 1em 2em;
+	color: var(--white);
+	border: 0;
+	font-family: 'Ranchers', cursive;
+	letter-spacing: 2px;
+	font-size: 2em;
+	border-color: none;
+}
+
+.button:hover,
+.button:active {
+	background: none;
+	border-color: none;
+	background: transparent;
+}
+
+.modal {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-content {
+	background: var(--white);
+	margin: 20% auto;
+	padding: 20px;
+}
+
+.modal-div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	position: relative;
+	border: none;
+}
+
+.modal-right,
+.modal-left {
+	padding: 20px 0;
+}
+
+.buttonDivRight {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttonDivLeft {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.attackBtnRight {
+	padding: 10px;
+	margin: 2px;
+	color: rgb(3, 3, 3);
+	font-family: 'Ranchers', cursive;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+
+}
+
+.defendBtnRight:active,
+.defendBtnLeft:active,
+.attackBtnRight:active,
+.attackBtnLeft:active {
+	outline: none;
+	border: none;
+}
+
+.defendBtnRight {
+	padding: 10px;
+	margin: 2px;
+	color: #000;
+	font-family: 'Ranchers', cursive;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.attackBtnLeft {
+	padding: 10px;
+	margin: 2px;
+	color: rgb(3, 3, 3);
+	font-family: 'Ranchers', cursive;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.defendBtnLeft {
+	padding: 10px;
+	margin: 2px;
+	color: rgb(0, 0, 0);
+	font-family: 'Ranchers', cursive;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.headingLeft {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Ranchers', cursive;
+	color: #647483;
+	letter-spacing: 1px;
+}
+
+.headingRight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Ranchers', cursive;
+	color: #647483;
+	letter-spacing: 1px;
+}
+//left
+.playerOneHeading {
+	// margin-top: -110px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	letter-spacing: 2px;
+}
+// right
+.playerTwoHeading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	font-family: 'Ranchers', cursive;
+	color: #212e3d;
+	letter-spacing: 2px;
+}
+
+.playerOneMessageDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.playerOneMessage {
+	font-size: 20px;
+	font-family: 'Ranchers', cursive;
+	color: #000;
+	letter-spacing: 1px;
+}
+
+.playerOneMessageH2 {
+	font-size: 30px;
+	font-family: 'Ranchers', cursive;
+	color: #000;
+	letter-spacing: 1px;
+}
+
+/* Beginning message*/
+#beginningScreen {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #43658b8f;
+	text-align: center;
+
+
+}
+
+.title {
+	background-color: #43658b;
+	background-size: cover;
+	color: var(--white);
+	font-family: 'Ranchers', cursive;
+	font-size: 40px;
+	letter-spacing: 2px;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+h2 {
+	font-size: 2em;
+	margin-right: 100px;
+	margin-left: 100px;
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	letter-spacing: 2px;
+
+}
+
+#start {
+	text-transform: uppercase;
+	font-family: 'Ranchers', cursive;
+	font-size: 2em;
+	background-color: #43658b;
+	color: var(--white);
+	width: 20%;
+	padding: 10px;
+	z-index: 1;
+	letter-spacing: 1px;
+}
+
+#start:hover {
+	border: none;
+	color: var(--white);
+	background-color: #41584b;
+}
+
+#start:active,
+#start:focus {
+	outline: none;
+}
+
+h2:hover,
+.title:hover {
+	border: none;
+	color: #212e3d;
+}
+
+// Flexbox container
+.weaponImageTextDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10;
+	position: relative;
+	animation-name: moveDivUp;
+	animation-duration: 5s ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveDivUp {
+	0% {
+		bottom: -1000px;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+// Flex item!
+.clickOnWeaponImages {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.weaponH1,
+.weaponH2,
+.weaponH3,
+.weaponH4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(55, 90, 114);
+	letter-spacing: 3px;
+	padding: 20px;
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	margin: 2px;
+	width: 200px;
+	-moz-transition: transform 1s;
+	-webkit-transition: transform 1s;
+	animation-name: weaponMovement;
+	transition: transform 2s;
+	transform: rotate(-360deg);
+	animation-iteration-count: infinite;
+}
+
+@keyframes weaponMovement {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+.weaponH1:hover,
+.weaponH2:hover,
+.weaponH3:hover,
+.weaponH4:hover {
+	color: var(--white);
+	background-color: #2e445e;
+}
+
+#firstWeapon, 
+#secondWeapon,
+#thirdWeapon,
+#fourthWeapon {
+	background-color: #43658b;
+	border-radius: 50px;
+	padding: 10px;
+	height: 80px;
+	width: 80px;
+	display: none;
+	margin: 5px;
+}
+
+ul li {
+	list-style: none;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+
+/* Attack Defend boxes*/
+/* Game over message*/
+.gameOverMessageDiv {
+	background-color: #293b4e;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0px;
+	width: 100%;
+}
+
+.gameOverMessageText {
+	font-size: 50px;
+	font-family: 'Ranchers', cursive;
+	color: var(--white);
+	letter-spacing: 2px;
+}
+
+.playAgainDiv {
+	background-color: #43658b;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 40px 0px;
+
+}
+
+.playAgainDivMessage {
+	font-size: 35px;
+	font-family: 'Ranchers', cursive;
+	color: #212e3d;
+	letter-spacing: 2px;
+	padding: 10px;
+}
+
+.playAgainDivBtn {
+	background-color: #2e445e;
+	color: var(--white);
+	font-size: 18px;
+	font-family: 'Ranchers', cursive;
+	letter-spacing: 2px;
+	padding: 20px;
+	margin-bottom: 5px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+
+}
+
+.playAgainDivBtn:active 
+.playAgainDivBtn:hover,
+.playAgainDivBtn:focus {
+	outline: none;
+	border: none;
+}
+
+#weaponsHeading {
+	font-size: 30px;
+	letter-spacing: 2px;
+	margin: 10px 0px;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#weaponsHeading.fas {
+	color: var(--white);
+	margin-top: 5px;
+	padding: 5px;
+}
+
+#playerOneWeaponUI,
+#playerTwoWeaponUI {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40px 40px;
+	padding: 20px;
+}
+
+.defaultWeapon {
+	background-image: url("../images/fire.apple-touch-icon.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	background-size: 40px 40px;
+	padding: 20px;
+
+}

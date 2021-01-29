@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <!--favicon image-->
+  <link rel="icon" type="--favicon" href="images/ninja.apple-touch-icon.png">
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+
+  <title>Ninja Wars</title>
+</head>
+<body>
+  <!-- Message before to start the game -->
+   <div id="beginningScreen">
+      <div class="gameRules mx-auto mt-5"> 
+       <h1 class="title">Space Ninja <br> VS <br> Planet invader Ninja</h1> 
+        <h4>Game Rules:</h4>
+       <ol class="gameRulesLi"> 
+      <li>Each player can move 3 spaces horizontally or vertically.</li>
+      <li>If a player passes over a box containing a weapon, they drop their current weapon and replace it with the new one.</li>
+      <li>If players cross over adjacent squares (horizontally or vertically), a battle begins.</li>
+      <li>Each player plays takes a turn. 
+        The player can choose to attack or defend against the next shot.</li>
+        <li>When one of the players loses all lifePoints, the game is over.</li>
+        </ol> 
+        </div>
+          <button id="start" class="btn btn-none">
+            <span>Start Game!</span>
+          </button>
+        </div> 
+
+  <!--Pop up Modal-->
+  <div class="col col-md-8 col-sm-8 col-xs-8">
+    <div id="simpleModal" class="modal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content "> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Main container-->
+  <div class="container-fluid">
+    <div class="row ">
+      <!--First player Div-->
+      <div class="col col-md-2 col-sm-2 col-xs-2 playerOneMainBox">
+        <div class="playerOneBox">
+          <h4 class="p1Heading ">Player One</h4>
+          <p class="playerName1">Space Ninja</p>
+          <img src="images/playerOneNinja.png" class="" width="50px" height="50px">
+          <p id="lifePoints1">Life points:</p>
+          <p id="points1">100</p>
+          <!--weapon for player 1-->
+          <p id="w1">weapon</p>
+          <span class="weaponClass" id="playerOneWeaponUI"></span>
+        </div>
+      </div>
+
+      <!--Gameboard container-->
+      <div class="col col-md-6 col-sm-6 col-xs-6 mx-auto">
+        <div id="gameboard" class="main-tile"> 
+        </div>
+      </div>
+
+      <!--Second player Div-->
+      <div class="col col-md-2 col-sm-2 col-xs-2 playerTwoMainBox">
+        <div class="playerTwoBox">
+          <h4 class="p2Heading">Player Two</h4>
+          <p class="playerName2">Planet Invader Ninja</p>
+          <img src="images/playerTwoNinja.png" width="50px" height="50px">
+          <p id="lifePoints2">Life points:</p>
+          <p id="points2">100</p>
+          <!--weapon for player 2-->
+          <p id="w2">weapon</p>
+          <span class="weaponClass" id="playerTwoWeaponUI"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weapon images with click event-->
+  <div class="weaponImageTextDiv">
+
+        <ul class="clickOnWeaponImages">
+          <li class="cyclones">
+            <h3 class="weaponH1">Cyclone</h3>
+            <img src="images/cyclone.apple-touch-icon.png" id="firstWeapon">
+          </li>
+          <li class="fires">
+            <h3 class="weaponH2">Fire</h3>
+            <img src="images/fire.apple-touch-icon.png" id="secondWeapon">
+          </li>
+          <li class="waves">
+            <h3 class="weaponH3">Wave</h3>
+            <img src="images/wave.apple-touch-icon.png" id="thirdWeapon">
+          </li>
+          <li class="lightnings">
+            <h3 class="weaponH4">lightning</h3>
+            <img src="images/lightning.apple-touch-icon.png" id="fourthWeapon">
+          </li>
+        </ul>
+   
+  </div> 
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <script src="main.js"></script>
+  <script src="gameboard.js"></script>
+  <script src="game.js"></script>
+ 
+
+</body>
+
+</html>
