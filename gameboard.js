@@ -2,7 +2,7 @@
 window.onunload = function () { window.scrollTo(0, 0); }
 
 // Function to set start screen for Game.
-function setStartingScreen() {
+function setStartingScreen(event) {
   $('#start').on('click', () => {
     $('#beginningScreen').hide();
     event.preventDefault();

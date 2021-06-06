@@ -8,7 +8,7 @@ function loopDirections(
   isPositive
 ) {
   let multiplier = isPositive ? 1 : -1;
-  // For loop for highlighted tiles right: +1, +2, +3
+  
   for (let i = loopStartValue; i < loopLessThanValue; i += incrementalValue) {
 
     let direction = tempNum + i * multiplier;
